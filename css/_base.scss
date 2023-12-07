@@ -7,35 +7,47 @@
 :root {
   --Grey: #49566d;
   --Cream: #f3ede7;
+  --Cream-White: #faf8f6;
+  --Dark-Blue: #172339;
 }
 
 .text-XL {
-  color: #172339;
+  color: var(--Dark-Blue);
   font-size: 4.5rem;
   font-weight: 400;
   line-height: 1.08;
   letter-spacing: -1px;
 
   &--bold {
+    @extend .text-XL;
     font-weight: 700;
+  }
+
+  @media screen and (max-width: 900px) {
+    font-size: 3.5rem;
   }
 }
 
 .text-L {
-  color: #172339;
+  color: var(--Dark-Blue);
   font-size: 3rem;
   font-weight: 400;
   line-height: 1.16;
   letter-spacing: -0.5px;
 
   &--bold {
+    @extend .text-L;
     font-weight: 700;
+  }
+
+  @media screen and (max-width: 900px) {
+    font-size: 2.5rem;
   }
 }
 
 .text-M {
-  color: #172339;
-  font-size: 1.12;
+  color: var(--Dark-Blue);
+  font-size: 1.12rem;
   font-weight: 700;
   line-height: 1.77;
   letter-spacing: -0.18px;
@@ -49,6 +61,7 @@
   letter-spacing: 2.5px;
 
   &--upper {
+    @extend .text-S;
     text-transform: uppercase;
   }
 }
@@ -59,6 +72,10 @@
   font-weight: 400;
   line-height: 1.75;
   letter-spacing: 0.111px;
+
+  @media screen and (max-width: 900px) {
+    font-size: 1.15rem;
+  }
 }
 
 .text-B {
@@ -67,6 +84,11 @@
   font-weight: 400;
   line-height: 1.77;
   letter-spacing: 0.1px;
+
+  &--bold {
+    @extend .text-B;
+    font-weight: 700;
+  }
 }
 
 .text-F {
@@ -74,4 +96,8 @@
   font-size: 0.93rem;
   font-weight: 400;
   line-height: 2.13;
+}
+
+.cream-color {
+  color: var(--Cream) !important;
 }
