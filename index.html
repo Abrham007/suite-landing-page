@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" />
 
     <link
       rel="icon"
@@ -10,8 +11,8 @@
       sizes="32x32"
       href="./assets/favicon-32x32.png"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com" />
+    <link rel="preload" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&display=swap"
       rel="stylesheet"
@@ -22,7 +23,13 @@
   </head>
   <body class="page">
     <header class="header">
-      <img class="header__logo" src="./assets/logo.svg" alt="suite logo" />
+      <img
+        class="header__logo"
+        src="./assets/logo.svg"
+        alt="suite logo"
+        width="79"
+        height="26"
+      />
       <button class="btn--secondary">Request Beta Access</button>
     </header>
     <main class="main">
@@ -40,7 +47,7 @@
         </div>
         <picture class="hero__img">
           <source
-            media="((max-width: 400px))"
+            media="((max-width: 700px))"
             srcset="
               ./assets/image-hero-landscape.webp,
               ./assets/image-hero-landscape@2x.webp 2x
@@ -48,7 +55,7 @@
             type="image/webp"
           />
           <source
-            media="((max-width: 400px))"
+            media="((max-width: 700px))"
             srcset="
               ./assets/image-hero-landscape.png,
               ./assets/image-hero-landscape.png 2x
@@ -86,58 +93,60 @@
           </div>
         </div>
       </section>
-      <figure class="review">
-        <picture class="review__img">
-          <source
-            media="((max-width: 900px))"
-            srcset="
-              ./assets/image-jeremy-small.webp,
-              ./assets/image-jeremy-small@2x.webp 2x
-            "
-            type="image/webp"
-          />
-          <source
-            media="((max-width: 900px))"
-            srcset="
-              ./assets/image-jeremy-small.png,
-              ./assets/image-jeremy-small.png2x
-            "
-            type="image/png"
-          />
-          <source
-            srcset="
-              ./assets/image-jeremy-large.webp,
-              ./assets/image-jeremy-large@2x.webp 2x
-            "
-            type="image/webp"
-          />
-          <source
-            srcset="
-              ./assets/image-jeremy-large.png,
-              ./assets/image-jeremy-large.png 2x
-            "
-            type="image/png"
-          />
-          <img src="./assets/image-jeremy-small.png" alt="" />
-        </picture>
-        <figcaption class="review__text">
-          <h2 class="text-L cream-color">
-            It just <span class="text-L--bold cream-color">works.</span>
-          </h2>
-          <q class="text-Q cream-color"
-            >I really like how it is an all-in-one solution that handle many of
-            the tasks that you would normally need separate tools to do the same
-            job. This thing is a miracle worker.</q
-          >
-          <div>
-            <p class="text-B--bold cream-color">Jeremy Robinson</p>
-            <p class="text-S--upper cream-color">CMO, Fylo</p>
-          </div>
-        </figcaption>
-      </figure>
+      <section class="main__review">
+        <figure class="review">
+          <picture class="review__img">
+            <source
+              media="((max-width: 900px))"
+              srcset="
+                ./assets/image-jeremy-small.webp,
+                ./assets/image-jeremy-small@2x.webp 2x
+              "
+              type="image/webp"
+            />
+            <source
+              media="((max-width: 900px))"
+              srcset="
+                ./assets/image-jeremy-small.png,
+                ./assets/image-jeremy-small.png2x
+              "
+              type="image/png"
+            />
+            <source
+              srcset="
+                ./assets/image-jeremy-large.webp,
+                ./assets/image-jeremy-large@2x.webp 2x
+              "
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./assets/image-jeremy-large.png,
+                ./assets/image-jeremy-large.png 2x
+              "
+              type="image/png"
+            />
+            <img src="./assets/image-jeremy-small.png" alt="" />
+          </picture>
+          <figcaption class="review__text">
+            <h2 class="text-L cream-color">
+              It just <span class="text-L--bold cream-color">works.</span>
+            </h2>
+            <q class="text-Q cream-color"
+              >I really like how it is an all-in-one solution that handle many
+              of the tasks that you would normally need separate tools to do the
+              same job. This thing is a miracle worker.</q
+            >
+            <div>
+              <p class="text-B--bold cream-color">Jeremy Robinson</p>
+              <p class="text-S--upper cream-color">CMO, Fylo</p>
+            </div>
+          </figcaption>
+        </figure>
+      </section>
     </main>
     <footer class="footer">
-      <img src="./assets/logo.svg" alt="suite logo" />
+      <img src="./assets/logo.svg" alt="suite logo" width="79" height="26" />
       <p class="text-F">Copyright - Suite</p>
       <div class="footer__icon-box">
         <svg
